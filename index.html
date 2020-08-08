@@ -4,44 +4,191 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>vim cheat sheet</title>
-    <link href="https://fonts.googleapis.com/css?family=Monserrat|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/tachyons.min.css">
   </head>
-  <body>
-    <section class="is-primary is-fullheight">
-      <header>
-        <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="http://kalmbach,github.io/vim">
-              <img src="vim-logo.png" alt="vim-logo">
-            </a>
-
-            <div class="navbar-burger burger" data-target="navbarMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="http://kalmbach.github.io/vim">
-                Vim Cheat Sheet
-              </a>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div class="hero-body">
-        <div class="container">
-          <div class="column is-6">
-            <h1 class="title is-1">
-              vim cheat sheet
-            </h1>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script type="text/javascript" src="index.js"></script>
+  <body class="code pa4">
+    <div class="fl w-100">
+      <h1 class="f1 light-red">Vim - Comandos</h1>
+    </div>
+    <div class="fl w-100">
+      <h4 class="f4 dark-gray">Global</h4>
+      <ul class="pa1 ma0">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">:h[help] keyword</kbd> - abrir ayuda para palabra clave
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">:sav[eas] file</kbd> - guardar archivo actual como
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">:clo[se]</kbd> - cerrar archivo actual
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">:ter[minal]</kbd> - abre una ventana de terminal en el editor
+        </li>
+      </ul>
+    </div>
+    <div class="fl w-100-ns w-50-l">
+      <h4 class="f4 dark-gray">Movimientos del cursor</h4>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">h</kbd> - mover el cursor hacia la izquierda
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">j</kbd> - mover el cursor hacia abajo 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">k</kbd> - mover el cursor hacia arriba 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">l</kbd> - mover el cursor hacia la derecha 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">0</kbd> - mover el cursor hacia el inicio de la línea 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">$</kbd> - mover el cursor hacia el final de la línea 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">^</kbd> - mover el cursor al primer caracter de la línea 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">%</kbd> - mover el cursor al caracter asociado, pares por defecto: (), {}, [] 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">gg</kbd> - mover el cursor a la primera línea del archivo 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">G</kbd> - mover el cursor a la ultima línea del archivo 
+        </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">w</kbd> - saltar hasta el inicio de la siguiente palabra 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">W</kbd> - saltar hasta el inicio de la siguiente palabra separada por espacio en blanco  
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">b</kbd> - regregar al inicio de la palabra anterior 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">B</kbd> - regresar al inicio de la palabra anterior separada por espacio en blanco 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">e</kbd> - saltar al final de la siguiente palabra 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">E</kbd> - saltar al final de la siguiente palabra separada por espacio en blanco 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">ge</kbd> - regresar al final de la palabra anterior 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">gE</kbd> - saltar al final de la palabra anterior separada por espacio en blanco 
+        </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">H</kbd> - saltar hacia la parte superior de la pantalla 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">M</kbd> - saltar hacia el centro de la pantalla 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">L</kbd> - saltar hacia la parte inferior de la pantalla 
+        </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">*</kbd> - buscar siguiente ocurrencia de la palabra bajo el cursor 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">#</kbd> - buscar ocurrencia anterior de la palabra bajo el cursor 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">/word</kbd> - buscar siguiente ocurrencia de la palabra, acepta expresiones regulares 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">?word</kbd> - buscar ocurrencia anterior de la palabra, acepta expresiones regulares 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">n</kbd> - repite la ultima búsqueda 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">n</kbd> - repite la ultima búsqueda en dirección contraria
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">:noh</kbd> - desactiva el resaltado hasta la proxima busqueda 
+        </li>
+      </ul>
+    </div>
+    <div class="fl w-100-ns w-50-l">
+      <h4 class="f4 dark-gray">Insertar/Agregar texto</h4>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">i</kbd> - insertar antes del cursor 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">I</kbd> - insertar al comienzo de la línea 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">a</kbd> - insertar despues del cursor 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">A</kbd> - insertar al final de la línea 
+        </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">o</kbd> - insertar nueva línea debajo
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">O</kbd> - insertar nueva línea encima 
+        </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">cm</kbd> - borrar el caracter en dirección <span class="i">m</span> y entrar en modo INSERTAR
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">cw</kbd> - borrar desde cursor hasta el final de la palabra y entrar en modo INSERTAR 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">cc</kbd> - borrar la línea actual y entrar en modo INSERTAR 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">C</kbd> - borrar desde cursor hasta el final de la línea y entrar en modo INSERTAR 
+        </li>
+      </ul>
+    </div>
+    <div class="fl w-100-ns w-50-l">
+      <h4 class="f4 dark-gray">Borrar texto</h4>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">x</kbd> - borrar caracter bajo el cursor, mover hacia delante 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">X</kbd> - borrar caracter bajo el cursor, mover hacia atras 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">r</kbd> - reemplazar caracter bajo el cursor 
+        </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">dm</kbd> - borrar en dirección <span class="i">m</span> 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">dw</kbd> - borrar desde cursor hasta el inicio de siguiente palabra 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">dd</kbd> - borrar la línea actual 
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">D</kbd> - borrar desde cursor hasta el final de la linea 
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
 
