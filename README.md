@@ -1,2 +1,2 @@
 # vim
-Vim Cheat Sheet
+Una lista de comandos vim esenciales :)
