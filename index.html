@@ -25,6 +25,9 @@
         <li class="list mb3">
           <kbd class="bg-light-gray pa1 b">:ter[minal]</kbd> - abre una ventana de terminal en el editor
         </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">:w !sudo tee %</kbd> - guardar archivo usando sudo
+        </li>
       </ul>
     </div>
     <div class="fl w-100-ns w-50-l">
@@ -193,54 +196,40 @@
       </ul>
     </div>
     <div class="fl w-100-ns w-50-l">
-      <h4 class="f4 dark-gray">Seleccionar texto</h4>
+      <h4 class="f4 dark-gray">Copiar y Pegar</h4>
       <ul class="pa1 ma0 mb3">
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">y</kbd> - seleccionar texto resaltado
+          <kbd class="bg-light-gray pa1 b">yy</kbd> - copiar linea actual
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">yy</kbd> - seleccionar linea actual
+          <kbd class="bg-light-gray pa1 b">dd</kbd> - cortar linea actual
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">yw</kbd> - seleccionar desde cursor hasta el final de la palabra
+          <kbd class="bg-light-gray pa1 b">yw</kbd> - copiar desde cursor hasta el inicio de la siguiente palabra
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">ynw</kbd> - seleccionar <span class="i">n</span> palabras desde cursor
+          <kbd class="bg-light-gray pa1 b">ynw</kbd> - copiar <span class="i">n</span> palabras desde cursor
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">y$</kbd> - seleccionar desde cursor hasta el final de la linea
+          <kbd class="bg-light-gray pa1 b">y$</kbd> - copiar desde cursor hasta el final de la linea
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">p</kbd> - insertar texto seleccionado despues del cursor
+          <kbd class="bg-light-gray pa1 b">dw</kbd> - cortar desde cursor hasta el incio de la siguiente palabra
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">P</kbd> - insertar texto seleccionado antes del cursor
+          <kbd class="bg-light-gray pa1 b">d$</kbd> - cortar desde cursor hasta el final de la linea
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">D</kbd> - cortar desde cursor hasta el final de la linea
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">p</kbd> - insertar texto copiado despues del cursor
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">P</kbd> - insertar texto copiado antes del cursor
         </li>
         <li class="list mb3">
           <kbd class="bg-light-gray pa1 b">J</kbd> - unir linea actual con la siguiente linea
-        </li>
-      </ul>
-      <ul class="pa1 ma0 mb3">
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">aw</kbd> - seleccionar la palabra bajo el cursor en modo VISUAL 
-        </li>
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">ab</kbd> - seleccionar un bloque con () en modo VISUAL 
-        </li>
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">aB</kbd> - seleccionar un bloque con {} en modo VISUAL 
-        </li>
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">at</kbd> - seleccionar un bloque con <> tags en modo VISUAL 
-        </li>
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">ib</kbd> - seleccionar un bloque interno con () en modo VISUAL 
-        </li>
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">iB</kbd> - seleccionar un bloque interno con {} en modo VISUAL 
-        </li>
-        <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">it</kbd> - seleccionar un bloque interno con <> tags en modo VISUAL 
         </li>
       </ul>
     </div>
@@ -248,10 +237,16 @@
       <h4 class="f4 dark-gray">Modo Visual</h4>
       <ul class="pa1 ma0 mb3">
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">v</kbd> - Entrar en modo visual y resaltar caracteres
+          <kbd class="bg-light-gray pa1 b">v</kbd> - Entrar en modo visual y seleccionar caracteres
         </li>
         <li class="list mb3">
-          <kbd class="bg-light-gray pa1 b">V</kbd> - Entrar en modo visual y resaltar lineas
+          <kbd class="bg-light-gray pa1 b">V</kbd> - Entrar en modo visual y seleccionar lineas
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">y</kbd> - copiar texto seleccionado
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">d</kbd> - borrar texto seleccionado
         </li>
         <li class="list mb3">
           <kbd class="bg-light-gray pa1 b">~</kbd> - Intercambiar mayúsculas/minúsculas del texto seleccionado
@@ -268,6 +263,30 @@
         <li class="list mb3">
           <kbd class="bg-light-gray pa1 b">U</kbd> - cambiar el texto seleccionado a mayúsculas
         </li>
+      </ul>
+      <ul class="pa1 ma0 mb3">
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">aw</kbd> - seleccionar la palabra bajo el cursor en modo VISUAL
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">ab</kbd> - seleccionar un bloque con () en modo VISUAL
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">aB</kbd> - seleccionar un bloque con {} en modo VISUAL
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">at</kbd> - seleccionar un bloque con <> tags en modo VISUAL
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">ib</kbd> - seleccionar un bloque interno con () en modo VISUAL
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">iB</kbd> - seleccionar un bloque interno con {} en modo VISUAL
+        </li>
+        <li class="list mb3">
+          <kbd class="bg-light-gray pa1 b">it</kbd> - seleccionar un bloque interno con <> tags en modo VISUAL
+        </li>
+      </ul>
       </ul>
     </div>
     <div class="fl w-100-ns w-50-l">
